@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom'
 import LanguageList from './LanguageList';
 
 class Translate extends Component {
@@ -64,28 +65,35 @@ class Translate extends Component {
 
   render() {
     return (
-      <div className='translation-form'>
-        <form onSubmit={this.handleSubmit}>
-          <h3>Enter a sentence you need to translate</h3>
-          <label>Sentence    </label>
-          <textarea id="sentence"
-            rows='1'
-            cols='50'
-            type="text"
-            value={this.state.sentence}
-            onChange={this.handleChange}
-            name='sentence' />
-          <label>Language    </label>
-          <input id="language"
-            type="text"
-            value={this.state.targetLanguage}
-            onChange={this.handleChange}
-            name='targetLanguage' />
-          <button type="submit">Submit</button>
-        </form>
-        <h4>Translation: {this.state.translatedSentence}</h4>
-        <button onClick={this.resetForm}>Reset Form</button>
-        <LanguageList allLanguages={this.state.allLanguages}/>
+      <div className='translation-page'>
+        <NavLink to='/'>
+          <div className='homepage-link-on-translations-page'>
+            <h3>Home</h3>
+          </div>
+        </NavLink>
+        <div className='translation-form'>
+          <form onSubmit={this.handleSubmit}>
+            <h3>Enter a sentence you need to translate</h3>
+            <label>Sentence    </label>
+            <textarea id="sentence"
+              rows='1'
+              cols='50'
+              type="text"
+              value={this.state.sentence}
+              onChange={this.handleChange}
+              name='sentence' />
+            <label>Language    </label>
+            <input id="language"
+              type="text"
+              value={this.state.targetLanguage}
+              onChange={this.handleChange}
+              name='targetLanguage' />
+            <button type="submit">Submit</button>
+          </form>
+          <h4>Translation: {this.state.translatedSentence}</h4>
+          <button onClick={this.resetForm}>Reset Form</button>
+          <LanguageList allLanguages={this.state.allLanguages}/>
+        </div>
       </div>
     )
   }

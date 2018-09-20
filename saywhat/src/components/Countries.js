@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import CountryList from './CountryList'
 
 class Countries extends Component {
@@ -21,7 +22,12 @@ class Countries extends Component {
   
   render() {
     return (
-      <div>
+      <div className='countries-page'>
+        <NavLink to='/'>
+          <div className='homepage-link-on-countries-page'>
+            <h3>Home</h3>
+          </div>
+        </NavLink>
         <h2>This is the Countries Component</h2>
         <CountryList countries={this.state.allCountries}/>
       </div>

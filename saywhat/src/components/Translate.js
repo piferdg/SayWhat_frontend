@@ -68,7 +68,7 @@ class Translate extends Component {
       <div className='translation-page'>
         <NavLink to='/'>
           <div className='homepage-link-on-translations-page'>
-            <h3>Home</h3>
+            <button>Home</button>
           </div>
         </NavLink>
         <div className='translation-form'>

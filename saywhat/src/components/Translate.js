@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import LanguageList from './LanguageList';
 
 class Translate extends Component {
-  
+
   state = {
     sentence: '',
     translatedSentence: '',
@@ -11,31 +11,29 @@ class Translate extends Component {
     allLanguages: []
   }
 
-//Put my API that I create for the languages here!!
+  //Put my API that I create for the languages here!!
   componentDidMount() {
     fetch('https://saywhattraslations.herokuapp.com/languages')
-    .then(response => response.json())
-    .then(languageData => {
-      console.log('Languages', languageData)
-      this.setState({
-        allLanguages: languageData.languages
+      .then(response => response.json())
+      .then(languageData => {
+        console.log('Languages', languageData)
+        this.setState({
+          allLanguages: languageData.languages
+        })
       })
-    })
   }
 
-
-  
   handleChange = (event) => {
     event.preventDefault()
     const key = event.target.name
     const value = event.target.value
-    
+
     this.setState({
       [key]: value
     })
-    
+
   }
-  
+
   handleSubmit = (event) => {
     event.preventDefault()
     fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyDBTFIs-1oGkj5MfK7y_yuu5umZGAWTWcM&q=${this.state.sentence}&target=${this.state.targetLanguage}`, {
@@ -45,13 +43,13 @@ class Translate extends Component {
       },
       body: JSON.stringify(this.state)
     })
-    .then(response => response.json())
-    .then(translationData => {
-      // console.log("Translation Info", translationData)
-      this.setState({
-        translatedSentence: translationData.data.translations[0].translatedText
+      .then(response => response.json())
+      .then(translationData => {
+        // console.log("Translation Info", translationData)
+        this.setState({
+          translatedSentence: translationData.data.translations[0].translatedText,
+        })
       })
-    })
   }
 
   resetForm = (event) => {
@@ -76,14 +74,16 @@ class Translate extends Component {
             <h3>Enter a sentence you need to translate</h3>
             <label>Sentence    </label>
             <textarea id="sentence"
-              rows='1'
-              cols='50'
+              rows='2'
+              cols='30'
               type="text"
               value={this.state.sentence}
               onChange={this.handleChange}
               name='sentence' />
-            <label>Language    </label>
-            <input id="language"
+            <label>Language Code:</label>
+            <textarea id="language"
+              rows='1'
+              cols='5'
               type="text"
               value={this.state.targetLanguage}
               onChange={this.handleChange}
@@ -92,7 +92,7 @@ class Translate extends Component {
           </form>
           <h4>Translation: {this.state.translatedSentence}</h4>
           <button onClick={this.resetForm}>Reset Form</button>
-          <LanguageList allLanguages={this.state.allLanguages}/>
+          <LanguageList allLanguages={this.state.allLanguages} onChange={this.handleChange} type='text' name='targetLanguage' value={this.state.targetLanguage} />
         </div>
       </div>
     )

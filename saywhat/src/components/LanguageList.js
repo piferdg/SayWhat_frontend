@@ -1,16 +1,17 @@
 import React from 'react'
 import Language from './Language'
 
-
 const LanguageList = ({ allLanguages }) => {
+    console.log('PROPS', allLanguages)
     let listOfLanguages = allLanguages.map((language) => {
         return <Language key={language.id}
-            languageName={language.language} />
+            languageName={language.languageName}
+            languageCode={language.languageCode} />
     })
 
     return (
         <div className='language-container'>
-            {listOfLanguages}
+            <select>{listOfLanguages}</select>
         </div>
     )
 }

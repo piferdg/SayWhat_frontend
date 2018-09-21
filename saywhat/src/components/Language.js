@@ -3,7 +3,8 @@ import React from 'react'
 const Language = (props) => {
   // console.log('PROPS', props)
   return (
-    <p>{props.languageName}</p>
+    <option className='language-options-container'>{props.languageName} - {props.languageCode}</option>
+    
   )
 }
 

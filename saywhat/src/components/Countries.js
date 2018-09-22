@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import CountryList from './CountryList'
+import { Button} from 'reactstrap';
 
 class Countries extends Component {
 
@@ -45,15 +46,15 @@ class Countries extends Component {
       <div className='countries-page'>
         <NavLink to='/'>
           <div className='homepage-link-on-countries-page'>
-            <button>Home</button>
+            <Button color="primary">Home</Button>
           </div>
         </NavLink>
         <NavLink to='/new-country'>
           <div className='add-country-button'>
-            <button>Add a New Country</button>
+            <Button color="secondary">Add a New Country</Button>
           </div>
         </NavLink>
-        <h2>This is the Countries Component</h2>
+        <h2>Your Saved Countries</h2>
         {this.state.gotData
           ? <CountryList countries={this.state.allCountries} deleteCountry={this.deleteCountry}/>
           : <h2>Loading your destinations, please hang tight!</h2>

@@ -93,7 +93,7 @@
 }
 
 .add-country-button button{
-  border: 1px solid black
+
 }
 
 .country-container {
@@ -129,34 +129,55 @@
   min-height: 100vh;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 500px) {
   .add-country-page { 
       background-image: url('./assets/Taj_landscape.jpg'); 
   }
 }
-
-/* .add-country-page {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-} */
 
 .countries-link-on-country-form-page button {
   border: .5px solid black;
 }
 
 .country-form {
-  border: 1px solid black;
+  background: rgb(249, 249, 249, 0.7); 
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+ 
+}
+
+.country-form-container {
+  width: 65vw;
+  margin: auto;
+  padding-top: 5vh;
+  
+}
+
+.country-form input {
+  padding-left: 1vw;
+}
+
+label {
+  text-decoration: underline;
 }
 
 .country-form-div {
-  padding-bottom: 2vh;
- 
+  padding-bottom: 2vh; 
 }
 
 .country-form-submit-button input{
   border: .5px solid black;
 } 
+.country-form-submit-button {
+  padding-top: 2%
+}
+
+.reset-button {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
 /* ///////////////////////////////////   Footer  ///////////////////////////////// */
 
 .footer {

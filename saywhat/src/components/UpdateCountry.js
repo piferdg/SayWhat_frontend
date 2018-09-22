@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Button, Alert } from 'reactstrap';
+import { Button } from 'reactstrap';
 
-class CountryForm extends Component {
+class UpdateCountry extends Component {
 
   state = {
-    post: {
       countryName: '',
       currency: '',
       primary_language: '',
@@ -13,66 +12,68 @@ class CountryForm extends Component {
       siteTwo: '',
       siteThree: '',
       wiki_url: '',
-    },
-    gotData: false
+  }
+
+  componentDidMount() {
+    this.parseQueryString()
+
+    fetch(`https://saywhattraslations.herokuapp.com/countries/${this.parseQueryString()}`)
+      .then(response => response.json())
+      .then(countryData => {
+        console.log('Countries on Update', countryData.countries)
+        this.setState(
+          {
+            countryName: countryData.countries.countryName,
+            currency: countryData.countries.currency,
+            primary_language: countryData.countries.primary_language,
+            siteOne: countryData.countries.siteOne,
+            siteTwo: countryData.countries.siteTwo,
+            siteThree: countryData.countries.siteThree,
+            wiki_url: countryData.countries.wiki_url,
+          }
+        )
+      })
+  }
+
+  parseQueryString = () => {
+    let url = window.location.href
+    return url.split('/')[5]
   }
 
   handleChange = (event) => {
-    const key = event.target.name
-    const value = event.target.value
+    const target = event.target
+    const value = target.value
+    const key = target.name
 
     this.setState(
-      { ...this.state, post: { ...this.state.post, [key]: value } }
-      // [key]: value
+      {[key]: value}
     )
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
 
-    fetch('https://saywhattraslations.herokuapp.com/country', {
-      method: 'POST',
+    fetch(`https://saywhattraslations.herokuapp.com/countries/${this.parseQueryString()}`, {
+      method: 'PUT',
       headers: {
         "content-type": "application/json"
       },
-      body: JSON.stringify(this.state.post)
+      body: JSON.stringify(this.state)
     })
       .then(response => response.json())
-      .then(response => response.status = 201 ? this.setState({ gotData: true }) : console.log('Error Posting'))
-      .then(setTimeout(function () {
-        this.setState({ gotData: false });
-      }.bind(this), 5000
-      ))
+      .then(response => response.status=201 ? console.log('Update Worked!!') : console.log('ERROR'))
+      // .then(response => response.status = 201 ? this.setState({ gotData: true }) : console.log('Error Posting'))
+      // .then(setTimeout(function () {
+      //   this.setState({ gotData: false });
+      // }.bind(this), 5000
+      // ))
 
-    event.target.reset()
-  }
-
-  resetForm = (event) => {
-    event.preventDefault()
-    this.setState({
-      post: {
-        countryName: '',
-        currency: '',
-        primary_language: '',
-        siteOne: '',
-        siteTwo: '',
-        siteThree: '',
-        wiki_url: ''
-      }
-    })
+    // event.target.reset()
   }
 
   render() {
     return (
-      <div className='add-country-page'>
-        {this.state.gotData
-          ?
-          <Alert color="success">
-            Your country has been added!
-          </Alert>
-          :
-          null
-        }
+      <div>
         <div className='back-to-countries-navlink'>
           <NavLink to='/countries'>
             <div className='countries-link-on-country-form-page'>
@@ -80,65 +81,70 @@ class CountryForm extends Component {
             </div>
           </NavLink>
         </div>
+        <h1>Update Country</h1>
         <div className='country-form-container'>
           <form className='country-form' onSubmit={this.handleSubmit} >
             <label htmlFor='countryName'>Country</label>
             <input
               type='text'
               name='countryName'
-              value={this.state.post.countryName}
+              value={this.state.countryName}
               onChange={this.handleChange}
               placeholder="Country name..." />
             <label htmlFor='currency'>Currency</label>
             <input
               type='text'
               name='currency'
-              value={this.state.post.currency}
+              value={this.state.currency}
               onChange={this.handleChange}
               placeholder="Currency..." />
             <label htmlFor='primary_language'>Primary Language</label>
             <input
               type='text'
               name='primary_language'
-              value={this.state.post.primary_language}
+              value={this.state.primary_language}
               onChange={this.handleChange}
               placeholder="Language..." />
             <label htmlFor='siteOne'>Site One</label>
             <input
               type='text'
               name='siteOne'
-              value={this.state.post.siteOne}
+              value={this.state.siteOne}
               onChange={this.handleChange}
               placeholder="Site.." />
             <label htmlFor='siteTwo'>Site Two</label>
             <input
               type='text'
               name='siteTwo'
-              value={this.state.post.siteTwo}
+              value={this.state.siteTwo}
               onChange={this.handleChange}
               placeholder="Site..." />
             <label htmlFor='siteThree'>Site Three</label>
             <input
               type='text'
               name='siteThree'
-              value={this.state.post.siteThree}
+              value={this.state.siteThree}
               onChange={this.handleChange}
               placeholder="Site..." />
             <label htmlFor='wiki_url'>Wikipedia page</label>
             <input
               type='text'
               name='wiki_url'
-              value={this.state.post.wiki_url}
+              value={this.state.wiki_url}
               onChange={this.handleChange}
               placeholder="wikipedia page..." />
             <div className='country-form-submit-button'>
               <Button color="success"
                 type='submit'
                 name='submit'
-                value='Add Country'>Add Country</Button>
+                value='Add Country'>Update</Button>
             </div>
-            <div className='reset-button'>
-              <Button color="secondary" onClick={this.resetForm}>Reset Form</Button>
+            <div>
+              <NavLink to='/countries'>
+              <div className='countries-link-on-country-form-page'>
+                <Button color="secondary">Back to Countries</Button>
+              </div>
+              </NavLink>
             </div>
           </form>
         </div>
@@ -147,5 +153,4 @@ class CountryForm extends Component {
   }
 }
 
-export default CountryForm
-
+export default UpdateCountry;

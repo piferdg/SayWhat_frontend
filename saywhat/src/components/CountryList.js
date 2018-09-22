@@ -10,6 +10,8 @@ const CountryList = (props) => {
             countryCurrency={country.currency}
             countryLanguage={country.primary_language}
             siteOne={country.siteOne}
+            siteTwo={country.siteTwo}
+            siteThree={country.siteThree}
             wiki_url={country.wiki_url}
             deleteCountry={props.deleteCountry}/>
     })

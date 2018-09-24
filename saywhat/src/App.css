@@ -51,22 +51,61 @@
   min-height: 100vh;
 }
 
+.translation-form-container {
+  width: 65vw;
+  margin: auto;
+  padding-top: 3vh;
+  
+}
+
+.translation-form {
+  background: rgb(249, 249, 249, 0.7); 
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.translation-form h3{
+  text-decoration: underline;
+  padding-bottom: 4vh;
+}
+
+.sentence-to-translate textarea{ 
+  width: 80%; 
+}
+
+
+@media only screen and (min-width: 400px) {
+  .sentence-to-translate textarea{ 
+    max-width: 80%; 
+  }
+}
+
 @media only screen and (min-width: 400px) {
   .translation-page { 
       background-image: url('./assets/Italy_colored_houses_landscape.jpg'); 
   }
 }
 
-.homepage-link-on-translations-page button {
-  border: 1px solid black
-}
-
-.translation-form button {
-  border: 1px solid black
-}
-
 .language-container select {
-  border: 1px solid black
+  border: .5px solid gray
+}
+
+.language-code-input {
+  padding-top: 2%;
+}
+
+.translation {
+  background: rgb(249, 249, 249, 0.7);
+  width: 65vw;
+  margin: auto;
+  margin-top: 5vh;
+  height: 25vh;
+}
+
+.translation h4{
+  text-decoration: underline;
+  font-weight: bold;
+  padding-bottom: 3vh;
 }
 
 
@@ -86,10 +125,6 @@
   .countries-page { 
       background-image: url('./assets/Eiffle_Tower_landscape.jpg'); 
   }
-}
-
-.homepage-link-on-countries-page button {
-  border: 1px solid black
 }
 
 .add-country-button button{

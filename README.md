@@ -1,5 +1,4 @@
-# "SayWhat"? 
-## Translation and Travel App
+# "SayWhat"? - The Translation and Travel App
 
 ### App Description
 The ‘SayWhat?’ app will allow the traveler to translate any words, sentences that they want. The traveler will be able to enter what they need translated in their native language, select a ‘target’ language that they’d like their sentence translated to, then click a button and have their sentence translated. ‘SayWhat?’ will also the traveler to add countries they'd like to visit. Including the ability to create/update/delete currency type, primary language, wikipedia page, and top 3 attractions.

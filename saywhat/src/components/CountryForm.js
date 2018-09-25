@@ -80,6 +80,7 @@ class CountryForm extends Component {
             </div>
           </NavLink>
         </div>
+        <h1>Add Country</h1>
         <div className='country-form-container'>
           <form className='country-form' onSubmit={this.handleSubmit} >
             <label htmlFor='countryName'>Country</label>

@@ -12,7 +12,10 @@ const LanguageList = ({ allLanguages }) => {
 
     return (
         <div className='language-container'>
-            <select>{listOfLanguages}</select>
+            <select>
+                <option disabled value=''>Languages and codes...</option>
+                {listOfLanguages}
+            </select>
         </div>
     )
 }

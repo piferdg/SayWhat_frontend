@@ -73,7 +73,7 @@ class UpdateCountry extends Component {
 
   render() {
     return (
-      <div>
+      <div className='update-country-page'>
         <div className='back-to-countries-navlink'>
           <NavLink to='/countries'>
             <div className='countries-link-on-country-form-page'>
@@ -82,7 +82,7 @@ class UpdateCountry extends Component {
           </NavLink>
         </div>
         <h1>Update Country</h1>
-        <div className='country-form-container'>
+        <div className='country-update-container'>
           <form className='country-form' onSubmit={this.handleSubmit} >
             <label htmlFor='countryName'>Country</label>
             <input
@@ -141,7 +141,7 @@ class UpdateCountry extends Component {
             </div>
             <div>
               <NavLink to='/countries'>
-              <div className='countries-link-on-country-form-page'>
+              <div className='countries-link-on-update-page'>
                 <Button color="secondary">Back to Countries</Button>
               </div>
               </NavLink>

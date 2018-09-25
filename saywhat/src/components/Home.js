@@ -1,25 +1,33 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/logo.png'
+import { Button } from 'reactstrap';
 
 class Home extends Component {
 
   render() {
     return (
-      <div className='home-heading-and-links'>
-        <div className='home-heading'>
-          <h1>Welcome to "SayWhat?"</h1>
-        </div>
-        <div className='homepage-links'>
-          <NavLink to='/translate'>
-            <div className='homepage-translation-link-text'>
-              <h3>Translations</h3>
-            </div>
-          </NavLink>
-          <NavLink to='/countries'>
-            <div className='homepage-countries-link-text'>
-              <h3>Countries</h3>
-            </div>
-          </NavLink>
+      <div className="homepage">
+        <div className='home-heading-and-links'>
+          <div className='home-heading'>
+            <h1>Welcome to "SayWhat?"</h1>
+            <h4>The translation and travel app</h4>
+          </div>
+          <div className='logo'>
+            <img src={logo} alt='saywhat logo' />
+          </div>
+          <div className='homepage-links'>
+            <NavLink to='/translate'>
+              <div className='homepage-translation-link-text'>
+                <Button color='primary'>Translations</Button>
+              </div>
+            </NavLink>
+            <NavLink to='/countries'>
+              <div className='homepage-countries-link-text'>
+                <Button color='primary' >Countries</Button>
+              </div>
+            </NavLink>
+          </div>
         </div>
       </div>
     )

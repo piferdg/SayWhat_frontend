@@ -63,6 +63,7 @@ class Translate extends Component {
   }
 
   render() {
+    const translation = this.state.translatedSentence
     return (
       <div className='translation-page'>
         <NavLink to='/'>
@@ -87,7 +88,7 @@ class Translate extends Component {
                 <LanguageList allLanguages={this.state.allLanguages} onChange={this.handleChange} type='text' name='targetLanguage' value={this.state.targetLanguage} />
               </div>
               <div className='language-code-input'>
-                <label>Language Code:</label>
+                <label>Language Code</label>
                 <textarea id="language"
                   rows='1'
                   cols='20'
@@ -95,7 +96,7 @@ class Translate extends Component {
                   value={this.state.targetLanguage}
                   onChange={this.handleChange}
                   name='targetLanguage' 
-                  placeholder='Language code...' />
+                  placeholder='Enter language code...' />
               </div>
               <div className='submit-button'>
                 <Button color="success" type='submit'>Translate</Button>
@@ -108,8 +109,14 @@ class Translate extends Component {
         </div>
         <div className='translation'>
           <h4>Translation:</h4>
+          {translation
+          ? 
           <h3>{this.state.translatedSentence}</h3>
-        </div>
+          :
+          <h5>Translation will appear here...</h5>
+          }
+          
+          </div>
       </div>
     )
   }

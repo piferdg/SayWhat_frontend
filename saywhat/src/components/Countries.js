@@ -51,10 +51,12 @@ class Countries extends Component {
         </NavLink>
         <NavLink to='/new-country'>
           <div className='add-country-button'>
-            <Button color="secondary">Add a New Country</Button>
+            <Button color="success">Add a New Country</Button>
           </div>
         </NavLink>
-        <h2>Your Saved Countries</h2>
+        <div className='countries-intro-text'>
+          <h2>Your Saved Countries</h2>
+        </div>
         {this.state.gotData
           ? <CountryList countries={this.state.allCountries} deleteCountry={this.deleteCountry}/>
           : <h2>Loading your destinations, please hang tight!</h2>

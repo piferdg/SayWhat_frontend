@@ -14,7 +14,7 @@ const Country = (props) => {
           <CardText>Site: {props.siteTwo}</CardText>
           <CardText>Site: {props.siteThree}</CardText>
           <CardLink href={props.wiki_url} target="_blank">Wikipedia Page</CardLink>
-          <div className='delete-country-button'>
+          <div className='update-and-delete-country-buttons'>
             <NavLink to={'/country/update/' + props.countryId} className='update-button'>
               <Button color='secondary'>Update</Button>
             </NavLink>

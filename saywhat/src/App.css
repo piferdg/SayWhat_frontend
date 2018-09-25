@@ -5,38 +5,63 @@
 
 /* ////////////////////////////////////   Home page   //////////////////// */
 
-.home-heading-and-links {
+.homepage {
   text-align: center;
   background-image: url('./assets/NYC_night_portrait.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
   height: 100vh;
+  padding-top: 10vh;
+}
+
+.logo {
+  padding-bottom: 5vh;
 }
 
 @media only screen and (min-width: 400px) {
-  .home-heading-and-links { 
+  .homepage { 
       background-image: url('./assets/Empire_State_landscape.jpg'); 
   }
 }
 
 .home-heading {
-  padding-top: 7vh;
+  /* padding-top: 7vh; */
   text-align: center;
+}
+
+.home-heading-and-links {
+  background: rgb(249, 249, 249, 0.7);
+  width: 80vw;
+  margin: auto;
+  border-radius: 5%;
+}
+
+@media only screen and (min-width: 400px) {
+  .home-heading-and-links { 
+    background: rgb(249, 249, 249, 0.7);
+    width: 40vw;
+    margin: auto;
+    border-radius: 5%; 
+  }
 }
 
 .homepage-links {
   text-align: center
-
 }
 
-.translations-link-homepage {
- 
-}
+.homepage-translation-link-text {
+  /* background: rgb(249, 249, 249, 0.7); 
+  width: 30vw;
+  margin: auto; */
+  margin-bottom: 2vh;
+} 
 
-.countries-link-homepage {
-
-
+.homepage-countries-link-text {
+  /* background: rgb(249, 249, 249, 0.7);
+  width: 30vw;
+  margin: auto; */
+  padding-bottom: 2vh;
 } 
 
 /* ////////////////////////////////   Translate Page /////////////////////////*/
@@ -69,7 +94,25 @@
   padding-bottom: 4vh;
 }
 
-.sentence-to-translate textarea{ 
+.translation-form label {
+  padding-right: 2vw;
+}
+
+.sentence-to-translate {
+  display: flex;
+  padding-bottom: 1vh;
+}
+
+.submit-button {
+  padding-top: 2vh;
+}
+
+.language-code-input {
+  display: flex;
+  padding-top: 2%;
+}
+
+.sentence-to-translate textarea { 
   width: 80%; 
 }
 
@@ -90,12 +133,8 @@
   border: .5px solid gray
 }
 
-.language-code-input {
-  padding-top: 2%;
-}
-
 .translation {
-  background: rgb(249, 249, 249, 0.7);
+  background: rgb(249, 249, 249, 0.8);
   width: 65vw;
   margin: auto;
   margin-top: 5vh;
@@ -107,6 +146,16 @@
   font-weight: bold;
   padding-bottom: 3vh;
 }
+
+.translation h5 {
+  font-style: italic;
+}
+
+.homepage-link-on-translations-page Button {
+  border: 1px solid black;
+}
+
+
 
 
 /* ////////////////////////////////////   Countries page   //////////////////// */
@@ -123,12 +172,41 @@
 
 @media only screen and (min-width: 400px) {
   .countries-page { 
-      background-image: url('./assets/Eiffle_Tower_landscape.jpg'); 
+      background-image: url('./assets/world_map_landscape.png'); 
   }
 }
 
-.add-country-button button{
+.country-info {
+  border: 1px solid black;
+  background: rgb(249, 249, 249, 0.8);
+  margin-bottom: 1vh;
+  padding: 3%;
+  width: 80vw;
+}
 
+@media only screen and (min-width: 400px) {
+  .country-info {
+    border: 1px solid black;
+    background: rgb(249, 249, 249, 0.8);
+    margin-bottom: 1vh;
+    padding: 3%;
+    width: 30vw;
+  }
+}
+
+
+.homepage-link-on-countries-page {
+  padding-bottom: 2vh;
+}
+
+.add-country-button {
+  padding-bottom: 2vh;
+}
+
+.countries-intro-text {
+  color: white;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
 
 .country-container {
@@ -137,19 +215,15 @@
   justify-content: space-evenly;
 }
 
-.country-info {
-  border: 1px solid black;
-  background: rgb(249, 249, 249, 0.8);
-  margin-bottom: 1vh;
-  padding: 3%;
-}
-
-.delete-country-button button {
-  
-}
-
 .country-container {
   padding-bottom: 6vh;
+}
+
+.update-and-delete-country-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2vh;
+
 }
 
 /* ////////////////////////////////////   CountryForm page   //////////////////// */
@@ -186,7 +260,7 @@
 .country-form-container {
   width: 65vw;
   margin: auto;
-  padding-top: 5vh;
+  padding-top: 1vh;
   
 }
 
@@ -194,7 +268,7 @@
   padding-left: 1vw;
 }
 
-label {
+.country-form label {
   text-decoration: underline;
 }
 
@@ -213,6 +287,37 @@ label {
   padding-top: 2%;
   padding-bottom: 2%;
 }
+
+/* //////////////////////////////////////  Update Country /////////////////////////////// */
+
+.update-country-page {
+  background: url('./assets/Venice_portrait.jpg') fixed;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;  
+  width: auto;
+  height: 100%;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 500px) {
+  .update-country-page { 
+      background-image: url('./assets/desert_landscape.jpg'); 
+  }
+}
+
+.country-update-container {
+  width: 65vw;
+  margin: auto;
+  padding-top: 1vh;
+  
+}
+
+.countries-link-on-update-page {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
 /* ///////////////////////////////////   Footer  ///////////////////////////////// */
 
 .footer {

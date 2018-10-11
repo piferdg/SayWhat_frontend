@@ -23,7 +23,6 @@ class CountryForm extends Component {
 
     this.setState(
       { ...this.state, post: { ...this.state.post, [key]: value } }
-      // [key]: value
     )
   }
 

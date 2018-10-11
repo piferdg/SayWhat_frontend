@@ -26,7 +26,6 @@
 }
 
 .home-heading {
-  /* padding-top: 7vh; */
   text-align: center;
 }
 
@@ -51,16 +50,10 @@
 }
 
 .homepage-translation-link-text {
-  /* background: rgb(249, 249, 249, 0.7); 
-  width: 30vw;
-  margin: auto; */
   margin-bottom: 2vh;
 } 
 
 .homepage-countries-link-text {
-  /* background: rgb(249, 249, 249, 0.7);
-  width: 30vw;
-  margin: auto; */
   padding-bottom: 2vh;
 } 
 
@@ -154,9 +147,6 @@
 .homepage-link-on-translations-page Button {
   border: 1px solid black;
 }
-
-
-
 
 /* ////////////////////////////////////   Countries page   //////////////////// */
 

@@ -62,13 +62,6 @@ class UpdateCountry extends Component {
     })
       .then(response => response.json())
       .then(response => response.status=201 ? console.log('Update Worked!!') : console.log('ERROR'))
-      // .then(response => response.status = 201 ? this.setState({ gotData: true }) : console.log('Error Posting'))
-      // .then(setTimeout(function () {
-      //   this.setState({ gotData: false });
-      // }.bind(this), 5000
-      // ))
-
-    // event.target.reset()
   }
 
   render() {

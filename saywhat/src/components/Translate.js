@@ -12,12 +12,10 @@ class Translate extends Component {
     allLanguages: []
   }
 
-  //Put my API that I create for the languages here!!
   componentDidMount() {
     fetch('https://saywhattraslations.herokuapp.com/languages')
       .then(response => response.json())
       .then(languageData => {
-        // console.log('Languages', languageData)
         this.setState({
           allLanguages: languageData.languages
         })
@@ -120,7 +118,6 @@ class Translate extends Component {
       </div>
     )
   }
-
 }
 
 export default Translate;

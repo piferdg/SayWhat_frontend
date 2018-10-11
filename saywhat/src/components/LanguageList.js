@@ -3,7 +3,6 @@ import Language from './Language'
 
 
 const LanguageList = ({ allLanguages }) => {
-    // console.log('PROPS', allLanguages)
     let listOfLanguages = allLanguages.map((language) => {
         return <Language key={language.id}
             languageName={language.languageName}

@@ -16,9 +16,9 @@ const Country = (props) => {
           <CardLink href={props.wiki_url} target="_blank">Wikipedia Page</CardLink>
           <div className='update-and-delete-country-buttons'>
             <NavLink to={'/country/update/' + props.countryId} className='update-button'>
-              <Button color='secondary'>Update</Button>
+              <Button className='update-country-button' color='secondary'>Update</Button>
             </NavLink>
-            <Button color="danger" onClick={(event) => props.deleteCountry(event, props.countryId)}>DELETE</Button>
+            <Button className='delete-country-button' color="danger" onClick={(event) => props.deleteCountry(event, props.countryId)}>DELETE</Button>
           </div>
         </CardBody>
       </Card>

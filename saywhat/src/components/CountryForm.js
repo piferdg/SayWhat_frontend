@@ -75,7 +75,7 @@ class CountryForm extends Component {
         <div className='back-to-countries-navlink'>
           <NavLink to='/countries'>
             <div className='countries-link-on-country-form-page'>
-              <Button color="primary">Back to Countries</Button>
+              <Button className='back-to-countries-button' color="primary">Back to Countries</Button>
             </div>
           </NavLink>
         </div>
@@ -132,13 +132,14 @@ class CountryForm extends Component {
               onChange={this.handleChange}
               placeholder="wikipedia page..." />
             <div className='country-form-submit-button'>
-              <Button color="success"
+              <Button className='new-country-button' 
+                color="success"
                 type='submit'
                 name='submit'
                 value='Add Country'>Add Country</Button>
             </div>
             <div className='reset-button'>
-              <Button color="secondary" onClick={this.resetForm}>Reset Form</Button>
+              <Button className='reset-form-button' color="secondary" onClick={this.resetForm}>Reset Form</Button>
             </div>
           </form>
         </div>

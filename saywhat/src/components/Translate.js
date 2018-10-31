@@ -66,7 +66,7 @@ class Translate extends Component {
       <div className='translation-page'>
         <NavLink to='/'>
           <div className='homepage-link-on-translations-page'>
-            <Button color="primary">Home</Button>
+            <Button className='home-button' color="primary">Home</Button>
           </div>
         </NavLink>
         <div className='translation-form-container'>
@@ -97,11 +97,11 @@ class Translate extends Component {
                   placeholder='Enter language code...' />
               </div>
               <div className='submit-button'>
-                <Button color="success" type='submit'>Translate</Button>
+                <Button className='translate-button' color="success" type='submit'>Translate</Button>
               </div>
             </form>
             <div className='reset-button'>
-              <Button color="secondary" onClick={this.resetForm}>Reset Form</Button>
+              <Button className='reset-form-button' color="secondary" onClick={this.resetForm}>Reset Form</Button>
             </div>
           </div>
         </div>

@@ -3,6 +3,10 @@
   position:relative
 }
 
+body {
+  overscroll-behavior: none;
+}
+
 /* ////////////////////////////////////   Home page   //////////////////// */
 
 .homepage {
@@ -27,6 +31,7 @@
 
 .home-heading {
   text-align: center;
+  padding-bottom: 2vh;
 }
 
 .home-heading-and-links {
@@ -46,7 +51,8 @@
 }
 
 .homepage-links {
-  text-align: center
+  text-align: center;
+  box-shadow: 5px 10px 18px black;
 }
 
 .homepage-translation-link-text {
@@ -56,6 +62,10 @@
 .homepage-countries-link-text {
   padding-bottom: 2vh;
 } 
+
+.translations-button-homepage, .countries-button-homepage {
+  box-shadow: 5px 10px 18px black;
+}
 
 /* ////////////////////////////////   Translate Page /////////////////////////*/
 
@@ -148,6 +158,10 @@
   border: 1px solid black;
 }
 
+.translate-button, .reset-form-button {
+  box-shadow: 5px 10px 18px black;
+}
+
 /* ////////////////////////////////////   Countries page   //////////////////// */
 
 .countries-page {
@@ -172,6 +186,7 @@
   margin-bottom: 1vh;
   padding: 3%;
   width: 80vw;
+  box-shadow: 8px 10px 30px black;
 }
 
 @media only screen and (min-width: 400px) {
@@ -214,6 +229,18 @@
   justify-content: space-evenly;
   padding-top: 2vh;
 
+}
+
+.countries-page h2 {
+  color: white;
+}
+
+.home-button, .new-country-button {
+  box-shadow: 5px 10px 18px black;
+}
+
+.update-country-button, .delete-country-button {
+  box-shadow: 5px 10px 18px black;
 }
 
 /* ////////////////////////////////////   CountryForm page   //////////////////// */
@@ -278,6 +305,10 @@
   padding-bottom: 2%;
 }
 
+.new-country-button, .reset-form-button {
+  box-shadow: 5px 10px 18px black;
+}
+
 /* //////////////////////////////////////  Update Country /////////////////////////////// */
 
 .update-country-page {
@@ -305,6 +336,13 @@
 
 .countries-link-on-update-page {
   padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.back-to-countries-button {
+  box-shadow: 5px 10px 18px black;
+}
+.countries-link-on-country-form-page {
   padding-bottom: 2vh;
 }
 

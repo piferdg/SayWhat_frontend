@@ -46,12 +46,12 @@ class Countries extends Component {
       <div className='countries-page'>
         <NavLink to='/'>
           <div className='homepage-link-on-countries-page'>
-            <Button color="primary">Home</Button>
+            <Button className='home-button' color="primary">Home</Button>
           </div>
         </NavLink>
         <NavLink to='/new-country'>
           <div className='add-country-button'>
-            <Button color="success">Add a New Country</Button>
+            <Button className='new-country-button' color="success">Add a New Country</Button>
           </div>
         </NavLink>
         <div className='countries-intro-text'>

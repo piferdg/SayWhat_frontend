@@ -19,12 +19,12 @@ class Home extends Component {
           <div className='homepage-links'>
             <NavLink to='/translate'>
               <div className='homepage-translation-link-text'>
-                <Button color='primary'>Translations</Button>
+                <Button className='translations-button-homepage' color='primary'>Translations</Button>
               </div>
             </NavLink>
             <NavLink to='/countries'>
               <div className='homepage-countries-link-text'>
-                <Button color='primary' >Countries</Button>
+                <Button className='countries-button-homepage' color='primary' >Countries</Button>
               </div>
             </NavLink>
           </div>

@@ -70,7 +70,7 @@ class UpdateCountry extends Component {
         <div className='back-to-countries-navlink'>
           <NavLink to='/countries'>
             <div className='countries-link-on-country-form-page'>
-              <Button color="primary">Back to Countries</Button>
+              <Button className='back-to-countries-button' color="primary">Back to Countries</Button>
             </div>
           </NavLink>
         </div>
@@ -127,7 +127,8 @@ class UpdateCountry extends Component {
               onChange={this.handleChange}
               placeholder="wikipedia page..." />
             <div className='country-form-submit-button'>
-              <Button color="success"
+              <Button className='update-country-button'
+                color="success"
                 type='submit'
                 name='submit'
                 value='Add Country'>Update</Button>
@@ -135,7 +136,7 @@ class UpdateCountry extends Component {
             <div>
               <NavLink to='/countries'>
               <div className='countries-link-on-update-page'>
-                <Button color="secondary">Back to Countries</Button>
+                <Button className='back-to-countries-button' color="secondary">Back to Countries</Button>
               </div>
               </NavLink>
             </div>

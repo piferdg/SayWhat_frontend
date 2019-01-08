@@ -50,7 +50,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
-  height: 100vh;
+  height: 95vh;
   padding-top: 10vh;
 }
 
@@ -110,8 +110,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
-  height: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 .translation-form-container {
@@ -205,11 +204,11 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
-  height: 100%;
-  min-height: 100vh;
+  /* height: 100%; */
+  min-height: 95vh;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 450px) {
   .countries-page { 
       background-image: url('./assets/world_map_landscape.png'); 
   }
@@ -224,7 +223,7 @@ body {
   box-shadow: 8px 10px 30px black;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 450px) {
   .country-info {
     border: 1px solid black;
     background: rgb(249, 249, 249, 0.8);
@@ -286,8 +285,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
-  height: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 @media only screen and (min-width: 500px) {
@@ -352,8 +350,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
-  height: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 @media only screen and (min-width: 500px) {

@@ -6,9 +6,9 @@ import { Button} from 'reactstrap';
 class Countries extends Component {
 
   state = {
-   allCountries: [],
-   countryName: '',
-   gotData: false
+    allCountries: [],
+    countryName: '',
+    gotData: false
   }
 
   componentDidMount() {
@@ -44,11 +44,11 @@ class Countries extends Component {
   render() {
     return (
       <div className='countries-page'>
-        <NavLink to='/'>
+        {/* <NavLink to='/'>
           <div className='homepage-link-on-countries-page'>
             <Button className='home-button' color="primary">Home</Button>
           </div>
-        </NavLink>
+        </NavLink> */}
         <NavLink to='/new-country'>
           <div className='add-country-button'>
             <Button className='new-country-button' color="success">Add a New Country</Button>

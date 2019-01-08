@@ -64,11 +64,11 @@ class Translate extends Component {
     const translation = this.state.translatedSentence
     return (
       <div className='translation-page'>
-        <NavLink to='/'>
+        {/* <NavLink to='/'>
           <div className='homepage-link-on-translations-page'>
             <Button className='home-button' color="primary">Home</Button>
           </div>
-        </NavLink>
+        </NavLink> */}
         <div className='translation-form-container'>
           <div className='translation-form'>
             <form onSubmit={this.handleSubmit}>

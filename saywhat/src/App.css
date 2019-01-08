@@ -7,6 +7,41 @@ body {
   overscroll-behavior: none;
 }
 
+/* ////////////////////////////////////   Navbar   /////////////////////// */
+
+.navbar {
+  height: 5vh;
+  background-color: black;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav-home-link {
+  padding-right: 5vw;
+}
+
+.nav-translate-link {
+  padding-right: 5vw;
+}
+
+.nav-home-link a{
+  color: white;
+}
+
+.nav-translate-link a{
+  color: white;
+}
+
+.nav-countries-link a{
+  color: white;
+}
+
+
+
 /* ////////////////////////////////////   Home page   //////////////////// */
 
 .homepage {

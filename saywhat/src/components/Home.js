@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
-import { Button } from 'reactstrap';
+// import { Button } from 'reactstrap';
 
 class Home extends Component {
 
@@ -16,7 +16,7 @@ class Home extends Component {
           <div className='logo'>
             <img src={logo} alt='saywhat logo' />
           </div>
-          <div className='homepage-links'>
+          {/* <div className='homepage-links'>
             <NavLink to='/translate'>
               <div className='homepage-translation-link-text'>
                 <Button className='translations-button-homepage' color='primary'>Translations</Button>
@@ -27,7 +27,7 @@ class Home extends Component {
                 <Button className='countries-button-homepage' color='primary' >Countries</Button>
               </div>
             </NavLink>
-          </div>
+          </div> */}
         </div>
       </div>
     )

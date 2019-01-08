@@ -7,12 +7,14 @@ import Countries from './components/Countries'
 import CountryForm from './components/CountryForm'
 import Footer from './components/Footer'
 import UpdateCountry from './components/UpdateCountry'
+import Navigation from './components/Navigation'
 
 class App extends Component {
   render(){
     return(
       <BrowserRouter>
         <div className='app'>
+          <Navigation />
           <Switch>
             <Route path='/' component={Home} exact />
             <Route path='/translate' component={Translate} exact />

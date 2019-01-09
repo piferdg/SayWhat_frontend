@@ -45,17 +45,18 @@ body {
 /* ////////////////////////////////////   Home page   //////////////////// */
 
 .homepage {
-  text-align: center;
   background-image: url('./assets/NYC_night_portrait.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
   height: 95vh;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 
 .logo {
+  text-align: center;
   padding-bottom: 5vh;
+  padding-top: 3vh;
 }
 
 @media only screen and (min-width: 400px) {
@@ -70,36 +71,28 @@ body {
 }
 
 .home-heading-and-links {
-  background: rgb(249, 249, 249, 0.7);
-  width: 80vw;
+  background: rgb(249, 249, 249, 0.8);
+  width: 70vw;
   margin: auto;
   border-radius: 5%;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 500px) {
   .home-heading-and-links { 
-    background: rgb(249, 249, 249, 0.7);
-    width: 40vw;
+    background: rgb(249, 249, 249, 0.8);
+    width: 70vw;
     margin: auto;
     border-radius: 5%; 
   }
 }
 
-.homepage-links {
-  text-align: center;
-  box-shadow: 5px 10px 18px black;
+.translation-info {
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-.homepage-translation-link-text {
-  margin-bottom: 2vh;
-} 
-
-.homepage-countries-link-text {
-  padding-bottom: 2vh;
-} 
-
-.translations-button-homepage, .countries-button-homepage {
-  box-shadow: 5px 10px 18px black;
+.countries-info {
+  padding: 2%;
 }
 
 /* ////////////////////////////////   Translate Page /////////////////////////*/

@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-// import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
-// import { Button } from 'reactstrap';
 
 class Home extends Component {
 
@@ -9,25 +7,28 @@ class Home extends Component {
     return (
       <div className="homepage">
         <div className='home-heading-and-links'>
-          <div className='home-heading'>
-            <h1>Welcome to "SayWhat?"</h1>
-            <h4>The translation and travel app</h4>
-          </div>
           <div className='logo'>
             <img src={logo} alt='saywhat logo' />
+            <h4>The translation and travel app</h4>
           </div>
-          {/* <div className='homepage-links'>
-            <NavLink to='/translate'>
-              <div className='homepage-translation-link-text'>
-                <Button className='translations-button-homepage' color='primary'>Translations</Button>
+          <div className='brochure-information'>
+            <div className='translation-info'>
+              <div>
+                <h5>Translations Page</h5>
               </div>
-            </NavLink>
-            <NavLink to='/countries'>
-              <div className='homepage-countries-link-text'>
-                <Button className='countries-button-homepage' color='primary' >Countries</Button>
+              <div>
+                <p>Click the 'Translations' link in the navigation bar to translate any word, or full customized sentence into 63 different languages!</p>
               </div>
-            </NavLink>
-          </div> */}
+            </div>
+            <div className='countries-info'>
+              <div>
+                <h5>Countries Page</h5>
+              </div>
+              <div>
+                <p>Click the 'Countries' link in the navigation bar to add, edit, or delete the countries you'd like to visit, and save valuable information for each country you add! For each country you can save primary language, currency, up to three sites you'd like to remember to visit, and the wikipedia page for that country.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )

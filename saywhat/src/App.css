@@ -99,11 +99,11 @@ body {
 
 .translation-page {
   background: url('./assets/belize_beach_portrait.png') fixed;
-  text-align: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
   min-height: 95vh;
+  padding-bottom: 6vh;
 }
 
 .translation-form-container {
@@ -114,33 +114,36 @@ body {
 }
 
 .translation-form {
-  background: rgb(249, 249, 249, 0.7); 
+  background: rgb(249, 249, 249, 0.9); 
   padding-left: 5vw;
   padding-right: 5vw;
 }
 
-.translation-form h3{
-  text-decoration: underline;
-  padding-bottom: 4vh;
-}
-
-.translation-form label {
-  padding-right: 2vw;
+h6 {
+  padding-top: 3vh;
 }
 
 .sentence-to-translate {
-  display: flex;
-  padding-bottom: 1vh;
+  padding-left: 2vw;
 }
 
-.submit-button {
-  padding-top: 2vh;
+.language-dropdown {
+  padding-left: 2vw;
 }
 
 .language-code-input {
-  display: flex;
-  padding-top: 2%;
+  padding-left: 2vw;
 }
+.translation-form-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit-button {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
 
 .sentence-to-translate textarea { 
   width: 80%; 
@@ -160,14 +163,15 @@ body {
 }
 
 .language-container select {
-  border: .5px solid gray
+  border: .5px solid gray;
+  max-width: 50vw;
 }
 
 .translation {
-  background: rgb(249, 249, 249, 0.8);
+  background: rgb(249, 249, 249, 0.9);
   width: 65vw;
   margin: auto;
-  margin-top: 5vh;
+  margin-top: 2vh;
   height: 25vh;
 }
 
@@ -175,10 +179,12 @@ body {
   text-decoration: underline;
   font-weight: bold;
   padding-bottom: 3vh;
+  text-align: center;
 }
 
-.translation h5 {
+.translation h5, h3 {
   font-style: italic;
+  text-align: center;
 }
 
 .homepage-link-on-translations-page Button {

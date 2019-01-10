@@ -1,22 +1,27 @@
-import React from 'react'
-import Language from './Language'
-
+import React from "react";
+import Language from "./Language";
 
 const LanguageList = ({ allLanguages }) => {
-    let listOfLanguages = allLanguages.map((language) => {
-        return <Language key={language.id}
-            languageName={language.languageName}
-            languageCode={language.languageCode} />
-    })
-
+  let listOfLanguages = allLanguages.map(language => {
     return (
-        <div className='language-container'>
-            <select>
-                <option disabled value=''>Languages and codes...</option>
-                {listOfLanguages}
-            </select>
-        </div>
-    )
-}
+      <Language
+        key={language.id}
+        languageName={language.languageName}
+        languageCode={language.languageCode}
+      />
+    );
+  });
 
-export default LanguageList
+  return (
+    <div className="language-container">
+      <select>
+        <option disabled value="">
+          Languages and codes...
+        </option>
+        {listOfLanguages}
+      </select>
+    </div>
+  );
+};
+
+export default LanguageList;

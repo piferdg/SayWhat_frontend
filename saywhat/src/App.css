@@ -49,14 +49,25 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
-  height: 95vh;
+  min-height: 95vh;
   padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .logo {
   text-align: center;
   padding-bottom: 5vh;
   padding-top: 3vh;
+}
+
+.logo img {
+  border: 1px dotted grey;
+  padding: 2%;
+  margin-bottom: 1vh;
+}
+
+.logo h4 {
+  font-style: italic;
 }
 
 @media only screen and (min-width: 400px) {
@@ -75,6 +86,7 @@ body {
   width: 70vw;
   margin: auto;
   border-radius: 5%;
+  
 }
 
 @media only screen and (min-width: 500px) {
@@ -117,10 +129,11 @@ body {
   background: rgb(249, 249, 249, 0.9); 
   padding-left: 5vw;
   padding-right: 5vw;
+  padding-top: 2vh;
 }
 
 h6 {
-  padding-top: 3vh;
+  /* padding-top: 3vh; */
 }
 
 .sentence-to-translate {
@@ -203,7 +216,6 @@ h6 {
   background-repeat: no-repeat;
   background-size: 100% 100%;  
   width: auto;
-  /* height: 100%; */
   min-height: 95vh;
 }
 
@@ -232,11 +244,6 @@ h6 {
   }
 }
 
-
-.homepage-link-on-countries-page {
-  padding-bottom: 2vh;
-}
-
 .add-country-button {
   padding-bottom: 2vh;
 }
@@ -261,7 +268,6 @@ h6 {
   display: flex;
   justify-content: space-evenly;
   padding-top: 2vh;
-
 }
 
 .countries-page h2 {
@@ -303,14 +309,13 @@ h6 {
   flex-direction: column;
   padding-left: 5vw;
   padding-right: 5vw;
- 
 }
 
 .country-form-container {
   width: 65vw;
   margin: auto;
   padding-top: 1vh;
-  
+  padding-bottom: 5vh;
 }
 
 .country-form input {
@@ -325,20 +330,20 @@ h6 {
   padding-bottom: 2vh; 
 }
 
-.country-form-submit-button input{
-  border: .5px solid black;
-} 
-.country-form-submit-button {
-  padding-top: 2%
-}
-
-.reset-button {
-  padding-top: 2%;
-  padding-bottom: 2%;
+.countries-page-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .new-country-button, .reset-form-button {
   box-shadow: 5px 10px 18px black;
+}
+
+.back-to-countries-navlink, .new-country-form-submit-button {
+  padding-bottom: 1vh;
 }
 
 /* //////////////////////////////////////  Update Country /////////////////////////////// */
@@ -362,6 +367,7 @@ h6 {
   width: 65vw;
   margin: auto;
   padding-top: 1vh;
+  padding-bottom: 5vh;
   
 }
 
@@ -375,6 +381,10 @@ h6 {
 }
 .countries-link-on-country-form-page {
   padding-bottom: 2vh;
+}
+
+.update-country-form-submit-button {
+  padding-top: 1vh;
 }
 
 /* ///////////////////////////////////   Footer  ///////////////////////////////// */

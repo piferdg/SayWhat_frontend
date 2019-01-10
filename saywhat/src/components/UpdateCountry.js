@@ -126,7 +126,7 @@ class UpdateCountry extends Component {
               value={this.state.wiki_url}
               onChange={this.handleChange}
               placeholder="wikipedia page..." />
-            <div className='country-form-submit-button'>
+            <div className='update-country-form-submit-button'>
               <Button className='update-country-button'
                 color="success"
                 type='submit'

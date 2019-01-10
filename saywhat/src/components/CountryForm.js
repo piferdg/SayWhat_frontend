@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Button, Alert } from 'reactstrap';
 
 class CountryForm extends Component {
@@ -72,13 +72,6 @@ class CountryForm extends Component {
           :
           null
         }
-        {/* <div className='back-to-countries-navlink'>
-          <NavLink to='/countries'>
-            <div className='countries-link-on-country-form-page'>
-              <Button className='back-to-countries-button' color="primary">Back to Countries</Button>
-            </div>
-          </NavLink>
-        </div> */}
         <h1>Add Country</h1>
         <div className='country-form-container'>
           <form className='country-form' onSubmit={this.handleSubmit} >
@@ -131,15 +124,22 @@ class CountryForm extends Component {
               value={this.state.post.wiki_url}
               onChange={this.handleChange}
               placeholder="wikipedia page..." />
-            <div className='country-form-submit-button'>
-              <Button className='new-country-button' 
-                color="success"
-                type='submit'
-                name='submit'
-                value='Add Country'>Add Country</Button>
-            </div>
-            <div className='reset-button'>
-              <Button className='reset-form-button' color="secondary" onClick={this.resetForm}>Reset Form</Button>
+            <div className='countries-page-buttons'>
+              <div className='new-country-form-submit-button'>
+                <Button className='new-country-button' 
+                  color="success"
+                  type='submit'
+                  name='submit'
+                  value='Add Country'>Add Country</Button>
+              </div>
+              <div className='back-to-countries-navlink'>
+                <NavLink to='/countries'>
+                  <Button className='back-to-countries-button' color="primary">Back to Countries</Button>
+                </NavLink>
+              </div>
+              <div className='reset-button'>
+                <Button className='reset-form-button' color="secondary" onClick={this.resetForm}>Reset Form</Button>
+              </div>
             </div>
           </form>
         </div>

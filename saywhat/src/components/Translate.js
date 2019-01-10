@@ -80,11 +80,13 @@ class Translate extends Component {
                   placeholder="Enter sentence to be translated..."
                   />
               </div>
+              <hr></hr>
 
               <h6><u>Step 2:</u> Search for the target language (language you want your sentence to be translated to) in the dropdown.</h6>
               <div className="language-dropdown">
                 <LanguageList allLanguages={this.state.allLanguages} type='text' />
               </div>
+              <hr></hr>
 
               <h6><u>Step 3:</u> After finding your target language, enter the two letter language code into the box below.</h6>
               <div className="language-code-input">
@@ -99,6 +101,7 @@ class Translate extends Component {
                   placeholder="Enter language code..."
                   />
               </div>
+              <hr></hr>
                 <h6><u>Step 4:</u> Click the 'Translate' button!</h6>
               <div className='translation-form-buttons'>
                 <div className="submit-button">

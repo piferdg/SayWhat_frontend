@@ -44,19 +44,14 @@ class Countries extends Component {
   render() {
     return (
       <div className='countries-page'>
-        {/* <NavLink to='/'>
-          <div className='homepage-link-on-countries-page'>
-            <Button className='home-button' color="primary">Home</Button>
-          </div>
-        </NavLink> */}
+        <div className='countries-intro-text'>
+          <h2>Your Saved Countries</h2>
+        </div>
         <NavLink to='/new-country'>
           <div className='add-country-button'>
             <Button className='new-country-button' color="success">Add a New Country</Button>
           </div>
         </NavLink>
-        <div className='countries-intro-text'>
-          <h2>Your Saved Countries</h2>
-        </div>
         {this.state.gotData
           ? <CountryList countries={this.state.allCountries} deleteCountry={this.deleteCountry}/>
           : <h2>Loading your destinations, please hang tight!</h2>

@@ -17,7 +17,7 @@ class Home extends Component {
                 <h5>Translations Page</h5>
               </div>
               <div>
-                <p>Click the 'Translations' link in the navigation bar to translate any word, or full customized sentence into 63 different languages!</p>
+                <p>Click the 'Translations' link in the navigation bar to translate any word, or customized sentence into 63 different languages!</p>
               </div>
             </div>
             <div className='countries-info'>

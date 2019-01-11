@@ -99,7 +99,6 @@ class Translate extends Component {
                 />
               </div>
               <hr />
-
               <h6>
                 <u>Step 2:</u> Search for the target language (language you want
                 your sentence to be translated to) in the dropdown.
@@ -111,7 +110,6 @@ class Translate extends Component {
                 />
               </div>
               <hr />
-
               <h6>
                 <u>Step 3:</u> After finding your target language, enter the two
                 letter language code into the box below.

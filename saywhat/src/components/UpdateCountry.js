@@ -67,13 +67,6 @@ class UpdateCountry extends Component {
   render() {
     return (
       <div className='update-country-page'>
-        {/* <div className='back-to-countries-navlink'>
-          <NavLink to='/countries'>
-            <div className='countries-link-on-country-form-page'>
-              <Button className='back-to-countries-button' color="primary">Back to Countries</Button>
-            </div>
-          </NavLink>
-        </div> */}
         <h1>Update Country</h1>
         <div className='country-update-container'>
           <form className='country-form' onSubmit={this.handleSubmit} >

@@ -132,10 +132,6 @@ body {
   padding-top: 2vh;
 }
 
-h6 {
-  /* padding-top: 3vh; */
-}
-
 .sentence-to-translate {
   padding-left: 2vw;
 }
@@ -153,15 +149,12 @@ h6 {
 }
 
 .submit-button {
-  padding-top: 2%;
   padding-bottom: 2%;
 }
-
 
 .sentence-to-translate textarea { 
   width: 80%; 
 }
-
 
 @media only screen and (min-width: 400px) {
   .sentence-to-translate textarea{ 
@@ -206,6 +199,10 @@ h6 {
 
 .translate-button, .reset-form-button {
   box-shadow: 5px 10px 18px black;
+}
+
+.error-alert {
+  text-align: center;
 }
 
 /* ////////////////////////////////////   Countries page   //////////////////// */
@@ -384,7 +381,12 @@ h6 {
 }
 
 .update-country-form-submit-button {
-  padding-top: 1vh;
+  padding-top: 2vh;
+}
+
+.update-form-buttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* ///////////////////////////////////   Footer  ///////////////////////////////// */

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button } from "reactstrap";
+import { Button, Alert } from "reactstrap";
 import LanguageList from "./LanguageList";
 
 class Translate extends Component {
@@ -8,6 +8,7 @@ class Translate extends Component {
     translatedSentence: "",
     targetLanguage: "",
     allLanguages: [],
+    errorMessage: false
   };
 
   componentDidMount() {
@@ -18,7 +19,7 @@ class Translate extends Component {
           allLanguages: languageData.languages
         });
       });
-    }
+  }
 
   handleChange = event => {
     event.preventDefault();
@@ -46,12 +47,22 @@ class Translate extends Component {
     )
       .then(response => response.json())
       .then(translationData => {
-        this.setState({
-          translatedSentence:
+          this.setState({
+            translatedSentence:
             translationData.data.translations[0].translatedText
-        });
-      });
+          });
+        }
+      )
+      .catch(error => {
+        this.setState({
+          errorMessage: true
+        });setTimeout(() => {
+          window.location.reload() 
+        }, 5000);
+      })
   };
+
+
 
   resetForm = event => {
     event.preventDefault();
@@ -66,10 +77,17 @@ class Translate extends Component {
     const translation = this.state.translatedSentence;
     return (
       <div className="translation-page">
+        {this.state.errorMessage ? (
+          <Alert className='error-alert' color="danger">
+            Woops! There was an error translating... Be sure to fill out all fields! <br></br> ~This page will automatically reload~
+          </Alert>
+        ) : null}
         <div className="translation-form-container">
           <div className="translation-form">
             <form onSubmit={this.handleSubmit}>
-              <h6><u>Step 1:</u> Enter the sentence you'd like to have translated.</h6>
+              <h6>
+                <u>Step 1:</u> Enter the sentence you'd like to have translated.
+              </h6>
               <div className="sentence-to-translate">
                 <textarea
                   id="sentence"
@@ -78,17 +96,26 @@ class Translate extends Component {
                   onChange={this.handleChange}
                   name="sentence"
                   placeholder="Enter sentence to be translated..."
-                  />
+                />
               </div>
-              <hr></hr>
+              <hr />
 
-              <h6><u>Step 2:</u> Search for the target language (language you want your sentence to be translated to) in the dropdown.</h6>
+              <h6>
+                <u>Step 2:</u> Search for the target language (language you want
+                your sentence to be translated to) in the dropdown.
+              </h6>
               <div className="language-dropdown">
-                <LanguageList allLanguages={this.state.allLanguages} type='text' />
+                <LanguageList
+                  allLanguages={this.state.allLanguages}
+                  type="text"
+                />
               </div>
-              <hr></hr>
+              <hr />
 
-              <h6><u>Step 3:</u> After finding your target language, enter the two letter language code into the box below.</h6>
+              <h6>
+                <u>Step 3:</u> After finding your target language, enter the two
+                letter language code into the box below.
+              </h6>
               <div className="language-code-input">
                 <textarea
                   id="language"
@@ -99,26 +126,32 @@ class Translate extends Component {
                   onChange={this.handleChange}
                   name="targetLanguage"
                   placeholder="Enter language code..."
-                  />
+                />
               </div>
-              <hr></hr>
-                <h6><u>Step 4:</u> Click the 'Translate' button!</h6>
-              <div className='translation-form-buttons'>
+              <hr />
+              <h6>
+                <u>Step 4:</u> Click the 'Translate' button!
+              </h6>
+              <div className="translation-form-buttons">
                 <div className="submit-button">
                   <Button
                     className="translate-button"
                     color="success"
-                    type="submit">Translate</Button>
+                    type="submit"
+                  >
+                    Translate
+                  </Button>
                 </div>
-              <div className="reset-button">
-                <Button
-                  className="reset-form-button"
-                  color="secondary"
-                  onClick={this.resetForm}>Reset Form</Button>
+                <div className="reset-button">
+                  <Button
+                    className="reset-form-button"
+                    color="secondary"
+                    onClick={this.resetForm}
+                  >
+                    Reset Form
+                  </Button>
+                </div>
               </div>
-              
-              </div>
-
             </form>
           </div>
         </div>
